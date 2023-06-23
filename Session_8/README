@@ -1,0 +1,52 @@
+Assignment is:
+
+Change the dataset to CIFAR10
+Make this network:
+C1 C2 c3 P1 C3 C4 C5 c6 P2 C7 C8 C9 GAP c10
+Keep the parameter count less than 50000
+Try and add one layer to another
+Max Epochs is 20
+You are making 3 versions of the above code (in each case achieve above 70% accuracy):
+Network with Group Normalization
+Network with Layer Normalization
+Network with Batch Normalization
+Share these details
+Training accuracy for 3 models
+Test accuracy for 3 models
+Find 10 misclassified images for the BN model, and show them as a 5x2 image matrix in 3 separately annotated images.
+write an explanatory README file that explains:
+what is your code all about,
+your findings for normalization techniques,
+add all your graphs
+your collection-of-misclassified-images
+Upload your complete assignment on GitHub and share the link on LMS
+📖 Introduction
+The goal of this assignment is to implement and evaluate the performance of a Convolutional Neural Network (CNN) with different normalization techniques on the CIFAR10 dataset. The network has a specific architecture (C1 C2 c3 P1 C3 C4 C5 c6 P2 C7 C8 C9 GAP c10 ) with the total parameter count kept under 50,000. "C" means 3x3 convoluion, "c" means 1x1 convolution, "P" means max pooling and "GAP" means global avaerag pooling. Network with skip connections.
+
+Three versions of the network are created, each applying a different normalization technique: Group Normalization (GN), Layer Normalization (LN), and Batch Normalization (BN). Each model is trained for 20 epochs, and the goal is to achieve an accuracy of above 70% for each model.
+
+The CIFAR10 dataset consists of 60,000 32x32 color training images and 10,000 test images, labeled into 10 classes. The 10 classes represent airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks. The dataset is divided into 50,000 training images and 10,000 validation images.
+
+
+
+FOR BATCHNORM:
+    number of parameters: 27,664
+    Training Accuracy: 72.55
+    Test Accuracy: 74.29
+    notebook : BatchNorm.ipynb
+    misclassified_images: images/batch_norm.PNG
+
+FOR LAYERNORM:
+    number of parameters: 49,280
+    Training Accuracy: 62.83
+    Test Accuracy: 65.52
+    notebook_link : LayerNorm.ipynb
+    misclassified_images: images/layer_norm.PNG
+
+FOR GROUPNORM:
+    number of parameters: 27,664
+    Training Accuracy: 69.54
+    Test Accuracy: 69.94
+    notebook_link : GroupNorm.ipynb
+    misclassified_images: images/group_norm.PNG
+
